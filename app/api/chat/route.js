@@ -15,8 +15,7 @@ The avaliable doctors are:
 `
 
 export async function POST(req) {
-  console.log("HITT")
-  const openai = OpenAI()
+  const openai = new OpenAI()
   const data = await req.json()
 
   const completion = await openai.chat.completions.create({
