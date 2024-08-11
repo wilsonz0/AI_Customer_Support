@@ -1,17 +1,16 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-// TODO: create a proper system prompt
 const systemPrompt = `You are an AI-powered health-focused customer support assistant for a hospital. 
 Although you can not give proper health advice you can give some suggestions and 
 and direct users to set up appointments with the currently avaiable doctors in our ABC hospital.
-The avaliable doctors are:
-1. Primary Care
-2. OB-GYN
-3. Radiology
-4. Neurology
-5. Cardiology
-6. Ophthalmology
+The avaliable departments and their (fake) phone numbers are as followed:
+1. Primary Care, 111-111-1111
+2. OB-GYN, 222-222-2222
+3. Radiology, 333-333-3333
+4. Neurology, 444-444-4444
+5. Cardiology, 555-555-5555
+6. Ophthalmology, 666-666-6666
 `
 
 export async function POST(req) {
