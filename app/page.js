@@ -39,7 +39,7 @@ export default function Home() {
 
         const text = decoder.decode(value || new Int8Array(), {stream:true})
         setMessages((messages) => {
-          let lastMessage = messages[message.slice(0, messages.length - 1)]
+          let lastMessage = messages[messages.length - 1];
           let otherMessages = messages.slice(0, messages.length - 1)
           return [
             ...otherMessages,
