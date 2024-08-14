@@ -1,13 +1,13 @@
 'use client'
 
-import { Box, Stack, TextField, Button } from "@mui/material";
+import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
 export default function Home() {
   const [messages, setMessages] = useState([{
     role: 'assistant',
     content: `Hi, I'm ABC Hospital's Support Agent. 
-    If you have any emergency, call 911. If not, how can I assist you today?`
+    If you have an emergency, please call 911. If not, how can I assist you today?`
   }])
 
   const [message, setMessage] = useState('')
@@ -58,14 +58,26 @@ export default function Home() {
 
   return (
     <Box 
+      bgcolor='gray'
       width="100vw" 
       height="100vh" 
       display="flex" 
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      paddingTop={10}
     >
+      <Typography 
+        variant="h4" 
+        color="white" 
+        fontFamily='monospace'
+        gutterBottom
+        sx={{ position: 'absolute', top: 16 }}
+      >
+        TakeCare Customer Support
+      </Typography>
       <Stack
+        bgcolor='white'
         direction="column"
         width="600px"
         height="700px"
