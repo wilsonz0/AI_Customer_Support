@@ -84,6 +84,7 @@ export default function Home() {
         border="3px solid black"
         p={2}
         spacing={3}
+        minHeight='400px'
       >
         <Stack
           direction="column"
